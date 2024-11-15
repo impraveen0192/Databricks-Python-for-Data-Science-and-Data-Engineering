@@ -47,6 +47,7 @@ import pandas as pd
 
 file_path = f"{DA.paths.datasets}/avocado/avocado.csv".replace("dbfs:", "/dbfs")
 df = pd.read_csv(file_path).drop("Unnamed: 0", axis=1) # drop unnamed index column from data
+display(df)
 
 # COMMAND ----------
 
@@ -63,7 +64,7 @@ df = pd.read_csv(file_path).drop("Unnamed: 0", axis=1) # drop unnamed index colu
 # COMMAND ----------
 
 # TODO
-filtered_df = TODO
+filtered_df = df[(df["year"] == 2018) & (df["type"] == "organic")]
 filtered_df
 
 # COMMAND ----------
@@ -111,7 +112,7 @@ print("Test passed!")
 # COMMAND ----------
 
 # TODO
-final_df = TODO
+final_df = filtered_df.groupby("region").agg({"Total Volume": "mean"}).sort_values("Total Volume", ascending=False).head(10)
 final_df
 
 # COMMAND ----------

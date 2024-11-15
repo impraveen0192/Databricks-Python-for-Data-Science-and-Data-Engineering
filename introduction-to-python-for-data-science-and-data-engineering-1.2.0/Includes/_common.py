@@ -71,8 +71,8 @@ course_config = CourseConfig(course_code = "inpy",
                              install_min_time = "1 min",
                              install_max_time = "5 min",
                              remote_files = remote_files,
-                             supported_dbrs = ["13.3.x-scala2.12", "13.3.x-photon-scala2.12", "13.3.x-cpu-ml-scala2.12"],
-                             expected_dbrs = "13.3.x-scala2.12, 13.3.x-photon-scala2.12, 13.3.x-cpu-ml-scala2.12")
+                             supported_dbrs = ["15.4.x-scala2.12","13.3.x-scala2.12", "13.3.x-photon-scala2.12", "13.3.x-cpu-ml-scala2.12"],
+                             expected_dbrs = "15.4.x-scala2.12, 13.3.x-scala2.12, 13.3.x-photon-scala2.12, 13.3.x-cpu-ml-scala2.12")
 
 lesson_config = LessonConfig(name = None,
                              create_schema = True,
